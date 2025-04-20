@@ -11,7 +11,6 @@ const getFlairAirlinesData = async (updatedDate) => {
         a.[High Level Ticket Channel],
         a.[Ticket satisfaction rating],
         CASE WHEN a.[High Level Ticket Channel] = 'Email' THEN 1 ELSE 0 END AS EmailHandled,
-        
         CASE WHEN a.[High Level Ticket Channel] = 'Social DM' THEN 1 ELSE 0 END AS SocialHandled,
         CASE WHEN a.[High Level Ticket Channel] = 'Ada Chat' THEN 1 ELSE 0 END AS ChatsHandled,
         CASE WHEN a.[Ticket satisfaction rating] = 'Bad' THEN 1 ELSE 0 END AS NegativeCSAT,
